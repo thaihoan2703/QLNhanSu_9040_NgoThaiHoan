@@ -226,7 +226,11 @@ namespace QLNhanSu
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dl = MessageBox.Show("Ban co chac muon thoat ung dung khong?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dl == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
